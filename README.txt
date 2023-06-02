@@ -16,7 +16,8 @@ Dante : 71%
 
 GRAPHICAL PROGRAMMING :
 Hunter : 100%
-Radar: 100%
+Radar : 100%
+Paint : N/A (still launchable)
 
 -----
 
