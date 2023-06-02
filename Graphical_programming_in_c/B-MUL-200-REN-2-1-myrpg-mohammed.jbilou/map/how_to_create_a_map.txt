@@ -1,0 +1,32 @@
+HOW TO CREATE A MAP
+
+-------------------
+
+[DESCRIPTION]
+
+Map need : init, event, and files that will contains data :
+ - map/files.txt (Contains data about the graphism of the map)
+ - save/map_default (Contains data about how the map has to be initialised by default)
+ - save/map_current (In game, datas about maps are saved into this folder)
+ - save/map (Save all map_current files into this folder, it's when player save the game) 
+
+[INIT]
+ - Will initialise game_actors and text for the map.
+
+[Event]
+ - Maps can handle events differently.
+
+[DATA FILES]
+ - Create files.txt in map_default and map_current. 
+  - In map_default : set informations about how the map is initialised by default
+    Example : CHEST:YES
+              EVENT_2:NO
+  - In map_current: Write CURRENT:NO (When game start, all files in map_current are like this, datas goes into during the game
+    and when game is exited, it reset all currents maps date to write CURRENT:NO)
+
+ADD new files to macro of src/struct.h.
+It then will search automaticaly in map_init.
+
+[HOW FILES DATA CHANGE]
+    - By functions of game actors, by writing in gm->save at the line of data desired.
+

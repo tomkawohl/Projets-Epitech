@@ -19,6 +19,7 @@ GRAPHICAL PROGRAMMING :
 Hunter : 100%
 Radar : 100%
 Paint : N/A (still launchable)
+RPG : 100%
 
 -----
 

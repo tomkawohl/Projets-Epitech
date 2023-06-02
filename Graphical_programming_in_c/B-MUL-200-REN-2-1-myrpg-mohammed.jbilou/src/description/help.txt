@@ -1,0 +1,35 @@
+[HELP FOR RPG]
+
+--------------
+
+[INPUTS IN GAME]
+ - Key Z : move forward
+ - Key Q : move to left
+ - Key S : move behind
+ - Key D : move to right
+
+ - Key E : interact with objets and pnj
+ - Key arrow_left : When a pnj give you a choice, move to the left choice
+ - Key arrow_right : When a pnj give you a choice, move to the right choice
+    For example : In the game when pnj ask you if he can teleport you to "Caligula", you can press 'E', then choose between yes or no and press E to validate
+        your choice.
+ - Key F : inventory
+
+ - Key Tab : skilltree
+ - Key Escape : to open in game menu
+
+[IN HOW TO PLAY]
+ - Key escape : to go back to game.
+
+[EVENTS]
+ - When you kill a monster, you earn experience to strengthen your player.
+ - When you interact with an objet with Key E, continue to press Key E to continue with interaction.
+
+[MENU]
+ - Resume to continue your last game, you cannot resume is there is no save.
+
+[MENU IN GAME]
+  - Save to save your progression.
+
+[MAP EDITOR]
+Visit the wiki section on this github : https://github.com/EpitechPromo2027/B-MUL-200-REN-2-1-myrpg-mohammed.jbilou
