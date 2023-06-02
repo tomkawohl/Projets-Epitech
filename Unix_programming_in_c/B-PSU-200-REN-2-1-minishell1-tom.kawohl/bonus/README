@@ -1,0 +1,10 @@
+--------------------------------
+---------- BONUS TESTS ---------
+--------------------------------
+
+Description :
+    This bonus folder countain a Makefile that compile the program mysh and run tests
+    and a folder named test_folder that countain the needed files to run tests
+
+Usage:
+    Run make test
