@@ -21,3 +21,4 @@ Radar: 100%
 
 UNIX PROGRAMMING :
 Sokoban : 88%
+Navy : 63%
