@@ -15,6 +15,7 @@ Pushswap : 55%
 
 GRAPHICAL PROGRAMMING :
 Hunter : 100%
+Radar: 100%
 
 -----
 

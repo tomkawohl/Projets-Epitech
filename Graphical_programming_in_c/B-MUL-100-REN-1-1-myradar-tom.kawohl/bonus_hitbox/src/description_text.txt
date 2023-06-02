@@ -1,0 +1,40 @@
+Bonus_hitbox:
+Air traffic simulation panel
+
+USAGE
+ ./my_radar [OPTIONS]
+ ./my_radar path_to_script
+
+PATH_TO_SCRIPT RULES
+  The path to the script file must be valid
+  
+  To add a plane in your script, add in order and on one line:
+  - The letter ‘A’
+  - Two integers corresponding to the departure x and y coordinates
+  - Two integers corresponding to the arrival x and y coordinates
+  - One integer corresponding to the aircraft’s speed (in pixels per second)
+  - One integer corresponding to the delay (in seconds) before the aircraft takes off
+  - Two integers corresponding to the hitbox, width and height
+
+  To add a tower in your script, add in order and on one line:
+  - The letter ‘T’
+  - Two integers corresponding to the control tower x- and y-coordinates
+  - One integer corresponding to the radius of the tower’s control area (corresponding to the percentage
+  of the greatest side of the window in pixel)
+
+  an exemple of a valid script named exemple.txt is at your disposal 
+
+OPTIONS
+ -h    print the usage and quit.
+ -d    debug mode to test collisions (hitbox's object become red if collisions are detected)
+
+USER INTERACTIONS
+ 'L' key    enable/disable hitboxes and areas.
+ 'S' key    enable/disable sprites.
+
+DEBUG USER INTERACTIONS
+  'arrow' keys  to move the plane
+  'R'     key   to rotate plane
+
+END CONDITIONS:
+If every planes are crashed or landed, the simulation ends
