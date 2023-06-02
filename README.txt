@@ -8,12 +8,15 @@ PROJECT : EVALUATION
 
 -----
 
-ELEMENTARY :
+ELEMENTARY PROGRAMMING :
 Pushswap : 55%
 
 -----
 
 GRAPHICAL PROGRAMMING :
-My_hunter : 100%
+Hunter : 100%
 
 -----
+
+UNIX PROGRAMMING :
+Sokoban : 88%
