@@ -1,0 +1,53 @@
+/*
+** EPITECH PROJECT, 2022
+** generate_maze
+** File description:
+** break_wall
+*/
+#include "src.h"
+
+void merge_way(int **maze, int x, int y, merge_t coord) //faire ça, puis return les coordoonées, coord return -1 -1 si FALSE == pas way
+{
+    maze[coord.y][coord.x] = coord.nb_cell;
+    /* première cellule, y == 0*/
+    if (coord.x == 0 && coord.y == 0) {
+        if (maze[0][1] != WALL_I)
+            maze[0][1] = coord.nb_cell;
+        if (maze[1][0] != WALL_I)
+            maze[1][0] = coord.nb_cell;
+        return;
+    }
+    /* dernière cellule, y == 0*/
+    if (coord.x == (x - 1) && coord.y == 0) {
+        if (maze[coord.y][coord.x - 1] != WALL_I)
+            maze[coord.y][coord.x] = coord.nb_cell;
+        if (maze[1][coord.x] != WALL_I)
+            maze[1][coord.x] = coord.nb_cell;
+        return;
+    }
+    /* les autres cellules, y == 0*/
+    if (coord.x != 0 && coord.y == 0) {
+        if (maze[coord.y][coord.x - 1] != WALL_I)
+            maze[coord.y][coord.x - 1] = coord.nb_cell;
+        if (maze[coord.y][coord.x + 1] != WALL_I)
+            maze[coord.y][coord.x + 1] = coord.nb_cell;
+        if (maze[coord.y + 1][coord.x] != WALL_I)
+            maze[coord.y + 1][coord.x] = coord.nb_cell;
+        return;
+    }
+
+    if (coord.x != 0) { //si c'est une case pas à 0 en x, peut regarder à gauche
+        if (maze[coord.y][coord.x - 1] != WALL_I)
+            maze[coord.y][coord.x - 1] = coord.nb_cell;
+    }
+    if (coord.x != (x - 1)) { //si pas à la fin de x, peut regarder à droite
+        if (maze[coord.y][coord.x + 1] != WALL_I)
+            maze[coord.y][coord.x + 1] = coord.nb_cell;
+    }
+    if (maze[coord.y - 1][coord.x] != WALL_I)
+        maze[coord.y - 1][coord.x] = coord.nb_cell;
+    if (coord.y != y - 1) {
+        if (maze[coord.y + 1][coord.x] != WALL_I)
+            maze[coord.y + 1][coord.x] = coord.nb_cell;
+    }
+}

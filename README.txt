@@ -10,6 +10,7 @@ PROJECT : EVALUATION
 
 ELEMENTARY PROGRAMMING :
 Pushswap : 55%
+Dante : 71%
 
 -----
 
