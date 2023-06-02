@@ -1,0 +1,80 @@
+/*
+** EPITECH PROJECT, 2022
+** rooms_linker.c
+** File description:
+** get the linkers in the room
+*/
+/**
+ * @file rooms_linker.c
+ *
+ * @brief get the linkers in the file and set them in the structure
+ *
+ * @date 30/03/2023
+*/
+#include "src.h"
+#include "parser.h"
+
+static void get_info_names(info_t *info)
+{
+    for (size_t i = 0, j = 0; info->cells[i]; i++, j++)
+        info->room[j].name = str_cpy(info->cells[i]);
+}
+
+static void get_position_start_end(info_t *info, char const *to_find, size_t j)
+{
+    char **pars = NULL;
+
+    for (size_t i = info->idx_to_start; info->file_to_parse[i]; i++){
+        if (info->file_to_parse[i][0] != '#'
+        && str_contains_char(info->file_to_parse[i], '-') == false
+        && my_strcmp(info->file_to_parse[i - 1], to_find) == 0){
+            pars = str_to_array_separator(info->file_to_parse[i], ' ', '\t');
+            info->room[j].x = my_getnbr_int(pars[1]);
+            info->room[j].y = my_getnbr_int(pars[2]);
+            break;
+        }
+    }
+    if (pars)
+        free_array_str2d(pars);
+}
+
+static void get_info_positions(info_t *info)
+{
+    char **pars = NULL;
+    size_t j = 1;
+
+    get_position_start_end(info, START, 0);
+    get_position_start_end(info, END, info->nb_cells - 1);
+
+    for (size_t i = info->idx_to_start; info->file_to_parse[i]; i++){
+        if (info->file_to_parse[i][0] != '#'
+        && str_contains_char(info->file_to_parse[i], '-') == false
+        && my_strcmp(info->file_to_parse[i - 1], START) != 0
+        && my_strcmp(info->file_to_parse[i - 1], END) != 0){
+            pars = str_to_array_separator(info->file_to_parse[i], ' ', '\t');
+            info->room[j].x = my_getnbr_int(pars[1]);
+            info->room[j].y = my_getnbr_int(pars[2]);
+            j++;
+        }
+    }
+}
+
+static size_t get_idx_rooms(info_t *info, char const *room)
+{
+    size_t idx = 0;
+
+    for (int i = 0; info->cells[i]; i++, idx++) {
+        if (my_strcmp(info->cells[i], room) == 0);
+            return idx;
+    }
+    return -1;
+}
+
+void get_all_info_to_struc_tab(info_t *info)
+{
+    char **separator = NULL;
+    info->room = malloc(sizeof(rooms_t) * (info->nb_cells));
+
+    get_info_names(info);
+    get_info_positions(info);
+}

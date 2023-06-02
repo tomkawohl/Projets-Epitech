@@ -11,6 +11,7 @@ PROJECT : EVALUATION
 ELEMENTARY PROGRAMMING :
 Pushswap : 55%
 Dante : 71%
+Lemin : 75.8%
 
 -----
 
