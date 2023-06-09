@@ -1,0 +1,5 @@
+get all user if empty table returns []
+
+do i need to return bad parameters if /user/:id is id of none of the users?
+same for :email
+
