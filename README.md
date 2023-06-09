@@ -33,12 +33,12 @@ Minishell1 : 100%
   
 ### DevOps :  
 ```  
-    Popeye : 100%  
+Popeye : 100%  
 ```  
 ***  
   
 ### Web : 
 ```  
-    EPyTodo : 22/22  
+EPyTodo : 22/22  
 ```  
   
