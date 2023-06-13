@@ -46,7 +46,7 @@ services:
       - db
     restart: always
   db:
-    image: 'postgres:latest'
+    image: 'postgres:11'
     volumes:
       - db-data:/var/lib/postgresql/data
       - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
